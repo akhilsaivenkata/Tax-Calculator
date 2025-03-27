@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  tax-api:
+    image: ptsdocker16/interview-test-server
+    ports:
+      - "5001:5001"
+
+  go-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      TAX_API_URL: http://tax-api:5001
+    depends_on:
+      - tax-api
