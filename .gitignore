@@ -1,0 +1,12 @@
+# Binaries
+tax-server
+*.exe
+*.out
+*.test
+
+# Build artifacts
+/build/
+bin/
+dist/
+
+.DS_Store
