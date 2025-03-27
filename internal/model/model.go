@@ -12,7 +12,7 @@ type TaxAPIResponse struct {
 	TaxBrackets []TaxBracket `json:"tax_brackets"`
 }
 
-// TaxCalculationRequest is your API's input from the client
+// TaxCalculationRequest is our API's input from the client
 type TaxCalculationRequest struct {
 	Income  float64 `json:"income" binding:"required"`
 	TaxYear int     `json:"tax_year" binding:"required"`
@@ -26,7 +26,7 @@ type TaxBandResult struct {
 	TaxPaid float64 `json:"tax_paid"`
 }
 
-// TaxCalculationResult is your API's final output
+// TaxCalculationResult is our API's final output
 type TaxCalculationResult struct {
 	TotalTax     float64         `json:"total_tax"`
 	EffectiveTax float64         `json:"effective_tax_rate"`

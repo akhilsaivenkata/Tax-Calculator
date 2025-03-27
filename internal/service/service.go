@@ -13,7 +13,7 @@ func NewTaxService() *TaxService {
 	return &TaxService{}
 }
 
-// CalculateTax applies the marginal tax logic
+// CalculateTax method applies the marginal tax logic
 func (s *TaxService) CalculateTax(income float64, brackets []model.TaxBracket) model.TaxCalculationResult {
 	logger.Log.WithField("income", income).Info("Starting tax calculation")
 

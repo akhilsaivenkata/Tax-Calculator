@@ -27,7 +27,9 @@ func main() {
 	}
 
 	apiClient := client.NewTaxAPIClient(apiBaseURL)
+
 	//apiClient := client.NewTaxAPIClient("http://localhost:5001") [Uncomment this line if you want to run it locally without env variables]
+
 	taxService := service.NewTaxService()
 	taxHandler := handler.NewTaxHandler(apiClient, taxService)
 
