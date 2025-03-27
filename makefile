@@ -30,5 +30,8 @@ clean:
 	rm -f $(BINARY_NAME) $(COVER_FILE) $(HTML_COVER_FILE)
 
 # Format all Go files
-fmt:
+# Run basic style and static checks
+lint:
 	go fmt ./...
+	go vet ./...
+	golint ./...

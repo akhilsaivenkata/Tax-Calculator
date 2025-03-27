@@ -11,11 +11,13 @@ import (
 	"github.com/akhilsaivenkata/go-tax-calculator/pkg/logger"
 )
 
+// TaxHandler handles HTTP requests for tax calculation.
 type TaxHandler struct {
 	Client  client.TaxClient
 	Service *service.TaxService
 }
 
+// NewTaxHandler returns a new instance of TaxHandler.
 func NewTaxHandler(c client.TaxClient, s *service.TaxService) *TaxHandler {
 	return &TaxHandler{
 		Client:  c,
