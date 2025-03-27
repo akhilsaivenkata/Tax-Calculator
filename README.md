@@ -128,7 +128,7 @@ go tool cover -html=coverage.out -o coverage.html
 
 - The external tax API (Flask) randomly fails and only supports years 2019–2022. This is intentional to test error handling.
 - The Go app validates all inputs and logs structured JSON logs (good for observability in production).
-- The service layer is fully decoupled and unit-tested.
+- One can also use make commands like make build, make run, make up to hit the ground running.
 
 ---
 
